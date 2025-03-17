@@ -3,53 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matrix with Brackets</title>
+    <title>Multiple Choice Quiz</title>
     <style>
-        table {
-            border-collapse: collapse;
-            margin: 20px;
-            display: inline-block;
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 10px;
+
+        h2 {
             text-align: center;
         }
-        .matrix-container {
-            display: inline-block;
-            padding: 5px;
+
+        .question {
+            margin-bottom: 15px;
         }
-        .brackets {
-            font-size: 30px;
-            margin-right: 5px;
+
+        .options label {
+            display: block;
+            padding: 5px;
+            border: 1px solid #ddd;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .options input[type="radio"] {
+            display: none;
+        }
+
+        .options input[type="radio"]:checked + label {
+            background-color: #cce5ff;
+            border-color: #007bff;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 16px;
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <h2>3x3 Matrix with Brackets</h2>
-    <div class="matrix-container">
-        <span class="brackets">[</span>
-        <table>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-            </tr>
-        </table>
-        <span class="brackets">]</span>
-    </div>
+
+    <h2>Multiple Choice Quiz</h2>
+
+    <form>
+        <div class="question">
+            <p>1. What is the capital of France?</p>
+            <div class="options">
+                <input type="radio" id="q1a" name="q1">
+                <label for="q1a">A) Berlin</label>
+
+                <input type="radio" id="q1b" name="q1">
+                <label for="q1b">B) Madrid</label>
+
+                <input type="radio" id="q1c" name="q1">
+                <label for="q1c">C) Paris</label>
+
+                <input type="radio" id="q1d" name="q1">
+                <label for="q1d">D) Rome</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. Which planet is known as the Red Planet?</p>
+            <div class="options">
+                <input type="radio" id="q2a" name="q2">
+                <label for="q2a">A) Earth</label>
+
+                <input type="radio" id="q2b" name="q2">
+                <label for="q2b">B) Mars</label>
+
+                <input type="radio" id="q2c" name="q2">
+                <label for="q2c">C) Jupiter</label>
+
+                <input type="radio" id="q2d" name="q2">
+                <label for="q2d">D) Venus</label>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
 </body>
 </html>
 
